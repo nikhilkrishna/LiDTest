@@ -1,6 +1,7 @@
 # LiDTest
 
-A Python tool for converting German history Q&A markdown content into GoCard flashcard format.
+A Python tool for converting German Living in Deutschland (LiD) Q&A markdown content into GoCard flashcard format.
+Use the GoCard TUI (<https://github.com/DavidMiserak/GoCard>) to display the Output flashcards.
 
 ## Features
 
@@ -13,37 +14,50 @@ A Python tool for converting German history Q&A markdown content into GoCard fla
 ## Requirements
 
 - Python 3.12+
-- uv 
+- uv
+- GoCard (<https://github.com/DavidMiserak/GoCard>)
 
 ## Setup
 
 ### Using uv (Recommended)
 
 1. Install uv if you haven't already:
-   ```bash
+
+  ```bash
+   
    curl -LsSf https://astral.sh/uv/install.sh | sh
-   ```
+   
+  ```
 
 2. Clone the repository:
-   ```bash
+
+  ```bash
+
    git clone <repository-url>
    cd LiDTest
-   ```
+   
+  ```
 
 3. Create and activate virtual environment:
+
    ```bash
+   
    uv venv
    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   
    ```
 
 ## Usage
 
-1. Place your German history Q&A markdown file in the `input_data/` directory as `Deutsche-Geschichte.md`
+1. Place your LiDTest Q&A markdown file in the `input_data/` directory as `Deutsche-Geschichte.md`
 
 2. Run the conversion:
+
    ```bash
-   python convert_to_go_card.py
-   ```
+
+  python convert_to_go_card.py
+  
+  ```
 
 3. Find the generated GoCard flashcards in the `GoCard/` directory
 
@@ -83,3 +97,12 @@ Question text here?
 
 Answer text here
 ```
+
+## How do I use the flash cards
+
+The GoCard github repository has a TUI program that will take these generated flashcards and show them in the terminal.
+You need to install it and point it at the output folder with the generated cards.
+
+## What is pending
+
+The biggest thing that is pending at this point is embedding the pictures.
